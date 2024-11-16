@@ -23,9 +23,5 @@ class PowerRecursion(PowerBase):
     def power(self, x: float, n: int) -> float:
         if n == 0:
             return 1.0
-        if n % 2 == 0:
-            r = self.power(x, n // 2)
-            return r * r
-        else:
-            r = self.power(x, n // 2)
-            return x * r * r
+        r = self.power(x, n // 2)
+        return r * r if n % 2 == 0 else x * r * r
