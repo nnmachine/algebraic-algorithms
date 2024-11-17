@@ -2,9 +2,8 @@ from test_base import TestBase
 
 
 class Test(TestBase):
-    _test_path = ["tests", "power"]
+    _test_path = ["tests", "fibo"]
     _file_name = "test"
 
     def _run_test(self, in_: str) -> str:
-        x, n = in_.split("\n")
-        return self._run(x, n)
+        return self._run(in_)
