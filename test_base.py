@@ -33,7 +33,7 @@ class TestBase:
             if result == out_:
                 print(f"Тест {iter} ОК")
             else:
-                print(f"Тест {iter} ошибка: {result} ожидалось: {out_}")
+                print(f"Тест {iter} ошибка")
 
             iter += 1
 

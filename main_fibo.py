@@ -1,6 +1,6 @@
 import sys
 
-from fibo import FiboBase, FiboIter, FiboRecursion
+from fibo import FiboBase, FiboGoldenRatio, FiboIter, FiboRecursion
 from test_fibo import Test
 
 if __name__ == "__main__":
@@ -15,6 +15,13 @@ if __name__ == "__main__":
     fibo: FiboBase = FiboIter()
     test()
 
+    print("==============================")
+    print("Вычисление чисел Фибоначчи через Золотое Сечение")
+
+    fibo = FiboGoldenRatio()
+    test()
+
+    # Дождаться всех тестов с рекурсивным алгоритмом мне не удалось
     print("==============================")
     print("Рекурсивное вычисление чисел Фибоначчи")
 

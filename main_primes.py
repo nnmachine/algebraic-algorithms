@@ -1,4 +1,4 @@
-from primes import PrimesBase, PrimesIter, PrimesEratosthen
+from primes import PrimesBase, PrimesEratosthen, PrimesIter
 from test_primes import Test
 
 if __name__ == "__main__":
@@ -14,5 +14,5 @@ if __name__ == "__main__":
 
     print("Поиск колличества простых чисел через решето Эратосфена")
 
-    power: PrimesBase = PrimesEratosthen()
+    power = PrimesEratosthen()
     test()

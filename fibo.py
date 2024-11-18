@@ -1,3 +1,8 @@
+from math import sqrt
+
+from power import PowerIter
+
+
 class FiboBase:
     def run(self, n_str: str) -> str:
         n_ = int(n_str)
@@ -30,3 +35,15 @@ class FiboIter(FiboBase):
             f1 = f2
             f2 = f_tmp + f1
         return f2
+
+
+class FiboGoldenRatio(FiboBase):
+    pow_ = PowerIter().power
+
+    def fibo(self, n: int) -> int:
+        try:
+            fi = (1.0 + sqrt(5)) / 2.0
+            f = int(self.pow_(fi, n) / sqrt(5) + 0.5)
+        except OverflowError:
+            f = -1
+        return f
