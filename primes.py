@@ -31,3 +31,19 @@ class PrimesIter(PrimesBase):
                 return False
 
         return True
+
+
+class PrimesEratosthen(PrimesBase):
+    def primes(self, n: int) -> int:
+        if n in (0, 1):
+            return 0
+
+        sieve = [False] * (n+1)
+        cnt = 0
+
+        for i in range(2, n+1):
+            if sieve[i] is False:
+                cnt += 1
+                for j in range(i*i, n+1, i):
+                    sieve[j] = True
+        return cnt
